@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.png">
+	<link rel="stylesheet" href="fonts/stylesheet.css">
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.min.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Gallery</title>
+	<style>
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 50px 0;
+        }
+        .gallery-section {
+            flex: 1 1 300px; /* Adjusts width based on available space */
+            max-width: 300px; /* Maximum width of each section */
+            margin: 10px;
+            text-align: center;
+        }
+        .gallery-section h3 {
+            margin-bottom: 10px;
+        }
+        .gallery-section img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        @media (hover: hover) {
+            .gallery-section img:hover {
+                transform: scale(1.05);
+            }
+        }
+        @media (max-width: 768px) {
+            .gallery-section {
+                flex: 1 1 45%;
+            }
+        }
+        @media (max-width: 480px) {
+            .gallery-section {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+	<div class="whatsapp-btn-container">
+		<a class="whatsapp-btn" href="https://wa.me/91999999999"><i class="fab fa-whatsapp"></i></a>
+		<span>Contact Us</span>
+	</div>
+	<div class="go-up">
+		<a href="#">
+			<img src="images/arrow-up.svg" alt="Go up">
+		</a>
+	</div>
+	<header class="site-header">
+
+		<div class="header-top">
+			<div class="container">
+				<div class="header-row">
+
+					<!-- Header top mobile START -->
+					<div class="header-mobile-logo">
+						<a href="index.html">
+							<img src="images/LOGO.png" alt="Construction">
+							<!-- <a href="index.html"><h2 style="color: black; margin-bottom:
+							0;">MATHRU<span style="color: orange;">SHREE</span></h2></a> -->
+						</a>
+					</div>
+
+					<div class="hamburger">
+						<span></span>
+						<span></span>
+					</div>
+					<!-- Header top mobile END -->
+
+					<div class="header-desc">{{ header_description }}</div>
+<div class="header-right">
+    <div class="header-info">
+        <img src="images/location.svg" alt="{{ address }}">
+        <span>{{ address }}</span>
+    </div>
+    <a href="tel:{{ phone_href }}" class="header-info">
+        <img src="images/phone.svg" alt="{{ phone_display }}">
+        <span style="color: white;">{{ phone_display }}</span>
+    </a>
+    <div class="header-social">
+        <a href="{{ instagram_url }}">
+            <img src="images/social-instagram.svg" alt="Instagram">
+        </a>
+    </div>
+</div>
+
+
+				</div>
+			</div>
+		</div>
+
+		<div class="header-bottom">
+			<div class="container">
+				<div class="header-bottom-row">
+					<div class="header-logo">
+						<a href="index.html">
+							<img src="images/LOGO.png" alt="Construction">
+							<!-- <a href="index.html"><h2 style="color: black; margin-bottom:
+							0;">MATHRU<span style="color: #ff2121;">SHREE</span></h2></a> -->
+						</a>
+					</div>
+
+					<nav class="header-nav">
+						<ul>
+							<li>
+								<a class="anchor-link" href="index.html#s-about">About us</a>
+							</li>
+							<li>
+								<a class="anchor-link" href="index.html#s-services">Services</a>
+							</li>
+							<li>
+								<a class="anchor-link" href="gallery.html">Gallery</a>
+							</li>
+							<li>
+								<a class="anchor-link" href="projects.html">Projects</a>
+							</li>
+							<li>
+								<a class="anchor-link" href="index.html#s-testimonials">Testimonials</a>
+							</li>
+							<li>
+								<a class="anchor-link" href="index.html#s-contact">Contact</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+
+		<!-- Header mobile START -->
+		<div class="header-mobile-wrap">
+			<nav class="header-mobile-nav">
+				<ul>
+					<li>
+						<a class="anchor-link" href="index.html#s-about">About us</a>
+					</li>
+					<li>
+						<a class="anchor-link" href="index.html#s-services">Services</a>
+					</li>
+					<li>
+						<a class="anchor-link" href="index.html#s-gallery">Gallery</a>
+					</li>
+					<li>
+						<a class="anchor-link" href="projects.html">Projects</a>
+					</li>
+					<li>
+						<a class="anchor-link" href="index.html#s-testimonials">Testimonials</a>
+					</li>
+					<li>
+						<a class="anchor-link" href="index.html#s-contact">Contact</a>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="header-mobile-info">
+				<img src="images/location.svg" alt="{{ address_alt_text }}">
+				<span>{{ address }}</span>
+			</div>
+			<a href="tel:{{ phone_href }}" class="header-mobile-info">
+				<img src="images/phone.svg" alt="{{ phone_alt_text }}">
+				<span>{{ phone_display }}</span>
+			</a>
+			<div class="header-mobile-social">
+				<a href="{{ instagram_url }}">
+					<img src="images/social-instagram.svg" alt="Instagram">
+				</a>
+			</div>
+			
+			
+		</div>
+		<!-- Header mobile END -->
+
+	</header>
+    <section class="s-gallery" id="s-gallery">
+		<div class="container">
+			<h2 class="center-title wow fadeIn" data-wow-delay="0.1s">{{ gallery_title }}</h2>
+			<div class="gallery-container">
+				<div class="gallery-section">
+					<h3>{{ work_title }}</h3>
+					<a href="{{ work_link }}">
+						<img style="max-height: 200px;" src="{{ work_image_src }}" alt="{{ work_alt_text }}">
+					</a>
+				</div>
+				<div class="gallery-section">
+					<h3>{{ elevation_title }}</h3>
+					<a href="{{ elevation_link }}">
+						<img style="max-height: 200px;" src="{{ elevation_image_src }}" alt="{{ elevation_alt_text }}">
+					</a>
+				</div>
+				<div class="gallery-section">
+					<h3>{{ interior_title }}</h3>
+					<a href="{{ interior_link }}">
+						<img style="max-height: 200px;" src="{{ interior_image_src }}" alt="{{ interior_alt_text }}">
+					</a>
+				</div>
+				<div class="gallery-section">
+					<h3>{{ plan_title }}</h3>
+					<a href="{{ plan_link }}">
+						<img style="max-height: 200px;" src="{{ plan_image_src }}" alt="{{ plan_alt_text }}">
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	
+	<footer class="site-footer">
+		<div class="container">
+	
+			<div class="footer-row">
+	
+				<div class="footer-left">
+					<div class="footer-logo">
+						<a href="index.html">
+							<img src="images/LOGO.png" alt="VibeWoods">
+						</a>
+					</div>
+					<div class="footer-desc">
+						<strong>VibeWoods</strong>
+						is a premier construction and design company specializing in building and renovation services.
+					</div>
+				</div>
+	
+				<div class="footer-right">
+					<nav class="footer-nav">
+						<h5 class="footer-title">Our Services</h5>
+						<ul>
+							<li><a href="#">Floor Planning</a></li>
+							<li><a href="#">Structural Design</a></li>
+							<li><a href="#">Interior Design</a></li>
+							<li><a href="#">Elevation</a></li>
+							<li><a href="#">Construction</a></li>
+						</ul>
+					</nav>
+	
+					<div class="footer-nav">
+						<h5 class="footer-title">Working Hours</h5>
+						<ul>
+							<li>Monday: 8:30 am - 6:00 pm</li>
+							<li>Tuesday: 8:30 am - 6:00 pm</li>
+							<li>Wednesday: 8:30 am - 6:00 pm</li>
+							<li>Thursday: 8:30 am - 6:00 pm</li>
+							<li>Friday: 8:30 am - 6:00 pm</li>
+							<li>Saturday: 10:00 am - 2:00 pm</li>
+							<li>Sunday: Closed</li>
+						</ul>
+					</div>
+	
+					<div class="footer-nav">
+						<h5 class="footer-title">{{ contact_us_title }}</h5>
+						<div class="footer-info-item">
+							<div class="footer-info-icon"><img src="images/location-gray.svg" alt="{{ location_alt_text }}"></div>
+							<div class="footer-info-text">{{ address }}</div>
+						</div>
+						<a href="tel:{{ phone_href }}" class="footer-info-item">
+							<div class="footer-info-icon"><img src="images/phone-gray.svg" alt="{{ phone_alt_text }}"></div>
+							<div class="footer-info-text">{{ phone_display }}</div>
+						</a>
+						<a href="mailto:{{ email }}" class="footer-info-item">
+							<div class="footer-info-icon"><img src="images/email-gray.svg" alt="{{ email_alt_text }}"></div>
+							<div class="footer-info-text">{{ email }}</div>
+						</a>
+					</div>
+					
+				</div>
+	
+			</div>
+	
+			<div class="footer-copyright">
+				<div class="copyright-text">Copyright © 2024 VibeWoods. All rights reserved</div>
+			</div>
+	
+		</div>
+	</footer>
+    <script src="js/jquery-3.7.0.min.js"></script>
+	<script src="js/swiper-bundle.min.js"></script>
+	<script src="js/magnific-popup.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
