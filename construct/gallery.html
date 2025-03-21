@@ -51,6 +51,42 @@
             }
         }
     </style>
+		
+		<style>
+			.gallery-container {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 20px;
+			}
+		
+			.gallery-section {
+				flex: 1 1 30%;
+				text-align: center;
+				max-width: 350px;
+			}
+		
+			.responsive-video {
+				width: 100%;
+				height: auto;
+				border-radius: 10px;
+				box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+			}
+		
+			/* Responsive design */
+			@media (max-width: 768px) {
+				.gallery-section {
+					flex: 1 1 45%;
+				}
+			}
+		
+			@media (max-width: 480px) {
+				.gallery-section {
+					flex: 1 1 100%;
+				}
+			}
+		</style>
+	
 </head>
 <body>
 	<div class="whatsapp-btn-container">
@@ -83,15 +119,17 @@
 					</div>
 					<!-- Header top mobile END -->
 
-					<div class="header-desc">{{ header_description }}</div>
+					<div class="header-desc">Best Interior Designers</div>
 <div class="header-right">
     <div class="header-info">
-        <img src="images/location.svg" alt="{{ address }}">
-        <span>{{ address }}</span>
+        <img src="images/location.svg" alt="Parallel to bescom soladevanhalli
+Hessarghatta main road">
+        <span>Parallel to bescom soladevanhalli
+Hessarghatta main road</span>
     </div>
     <a href="tel:{{ phone_href }}" class="header-info">
-        <img src="images/phone.svg" alt="{{ phone_display }}">
-        <span style="color: white;">{{ phone_display }}</span>
+        <img src="images/phone.svg" alt="+91 9986431664">
+        <span style="color: white;">+91 9986431664</span>
     </a>
     <div class="header-social">
         <a href="{{ instagram_url }}">
@@ -169,11 +207,12 @@
 
 			<div class="header-mobile-info">
 				<img src="images/location.svg" alt="{{ address_alt_text }}">
-				<span>{{ address }}</span>
+				<span>Parallel to bescom soladevanhalli
+Hessarghatta main road</span>
 			</div>
 			<a href="tel:{{ phone_href }}" class="header-mobile-info">
 				<img src="images/phone.svg" alt="{{ phone_alt_text }}">
-				<span>{{ phone_display }}</span>
+				<span>+91 9986431664</span>
 			</a>
 			<div class="header-mobile-social">
 				<a href="{{ instagram_url }}">
@@ -191,32 +230,30 @@
 			<h2 class="center-title wow fadeIn" data-wow-delay="0.1s">{{ gallery_title }}</h2>
 			<div class="gallery-container">
 				<div class="gallery-section">
-					<h3>{{ work_title }}</h3>
-					<a href="{{ work_link }}">
-						<img style="max-height: 200px;" src="{{ work_image_src }}" alt="{{ work_alt_text }}">
-					</a>
+					<h3>{{ video1_title }}</h3>
+					<video controls autoplay muted loop class="responsive-video">
+						<source src="images/project2.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
 				</div>
 				<div class="gallery-section">
-					<h3>{{ elevation_title }}</h3>
-					<a href="{{ elevation_link }}">
-						<img style="max-height: 200px;" src="{{ elevation_image_src }}" alt="{{ elevation_alt_text }}">
-					</a>
+					<h3>{{ video2_title }}</h3>
+					<video controls autoplay muted loop class="responsive-video">
+						<source src="images/project2.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
 				</div>
 				<div class="gallery-section">
-					<h3>{{ interior_title }}</h3>
-					<a href="{{ interior_link }}">
-						<img style="max-height: 200px;" src="{{ interior_image_src }}" alt="{{ interior_alt_text }}">
-					</a>
-				</div>
-				<div class="gallery-section">
-					<h3>{{ plan_title }}</h3>
-					<a href="{{ plan_link }}">
-						<img style="max-height: 200px;" src="{{ plan_image_src }}" alt="{{ plan_alt_text }}">
-					</a>
+					<h3>{{ video3_title }}</h3>
+					<video controls autoplay muted loop class="responsive-video">
+						<source src="images/project2.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
 				</div>
 			</div>
 		</div>
 	</section>
+	
 	
 	
 	<footer class="site-footer">
@@ -265,15 +302,16 @@
 						<h5 class="footer-title">{{ contact_us_title }}</h5>
 						<div class="footer-info-item">
 							<div class="footer-info-icon"><img src="images/location-gray.svg" alt="{{ location_alt_text }}"></div>
-							<div class="footer-info-text">{{ address }}</div>
+							<div class="footer-info-text">Parallel to bescom soladevanhalli
+Hessarghatta main road</div>
 						</div>
 						<a href="tel:{{ phone_href }}" class="footer-info-item">
 							<div class="footer-info-icon"><img src="images/phone-gray.svg" alt="{{ phone_alt_text }}"></div>
-							<div class="footer-info-text">{{ phone_display }}</div>
+							<div class="footer-info-text">+91 9986431664</div>
 						</a>
-						<a href="mailto:{{ email }}" class="footer-info-item">
+						<a href="mailto:vibewoods2022@gmail.com" class="footer-info-item">
 							<div class="footer-info-icon"><img src="images/email-gray.svg" alt="{{ email_alt_text }}"></div>
-							<div class="footer-info-text">{{ email }}</div>
+							<div class="footer-info-text">vibewoods2022@gmail.com</div>
 						</a>
 					</div>
 					
