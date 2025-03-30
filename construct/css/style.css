@@ -50,6 +50,44 @@ html, body {
     transform: rotateZ(0deg) translateX(0px);
     opacity: 1;
 }
+.instagram-btn-container {
+    position: fixed;
+    right: 10px;
+    opacity: 0;
+    bottom: 190px !important; /* Positioned above WhatsApp */
+    padding: 24px;
+    animation: fade-up 1000ms forwards;
+    animation-delay: 1000ms;
+    z-index: 100;
+}
+
+.instagram-btn-container .instagram-btn {
+    font-size: 48px;
+    color: #E4405F;
+    display: inline-block;
+    transition: all 400ms;
+}
+
+.instagram-btn-container .instagram-btn:hover {
+    transform: scale(1.2);
+}
+
+.instagram-btn-container span {
+    position: absolute;
+    top: 0;
+    left: 4px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    color: #E4405F;
+    transform: rotateZ(20deg) translateX(10px);
+    opacity: 0;
+    transition: all 400ms;
+}
+
+.instagram-btn-container .instagram-btn:hover + span {
+    transform: rotateZ(0deg) translateX(0px);
+    opacity: 1;
+}
 .milestone-container {
 	background: linear-gradient(135deg,rgb(15, 39, 51), #1e3a47, #2c5364);
 	padding: 50px;
